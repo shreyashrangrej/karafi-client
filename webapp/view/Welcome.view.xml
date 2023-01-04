@@ -1,7 +1,13 @@
-<mvc:View controllerName="com.karafi.karaficlient.controller.Welcome"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+<mvc:View controllerName="com.karafi.karaficlient.controller.Welcome" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showHeader="false">
+        <content>
+            <VBox>
+                <Label text="User Name:" />
+                <Input id="username" type="Text" value="" />
+                <Label text="Password:" />
+                <Input id="password" type="Password" value="" />
+                <Button text="Login" press=".onLogin" />
+            </VBox>
+        </content>
     </Page>
 </mvc:View>
