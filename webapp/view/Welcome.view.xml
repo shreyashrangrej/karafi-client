@@ -1,12 +1,14 @@
-<mvc:View controllerName="com.karafi.karaficlient.controller.Welcome" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View controllerName="com.karafi.karaficlient.controller.Welcome" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout">
     <Page id="page" title="{i18n>title}" showHeader="false">
         <content>
-            <VBox>
-                <Label text="User Name:" />
-                <Input id="username" type="Text" value="" />
-                <Label text="Password:" />
-                <Input id="password" type="Password" value="" />
-                <Button text="Login" press=".onLogin" />
+            <VBox class="sapUiSmallMargin" fitContainer="true" width="300px">
+                <items>
+                    <Label text="Username" />
+                    <Input id="username" value="" width="100%" />
+                    <Label text="Password" />
+                    <Input id="password" value="" width="100%" type="Password" />
+                    <Button text="Log In" type="Emphasized" press=".onLogin" />
+                </items>
             </VBox>
         </content>
     </Page>
